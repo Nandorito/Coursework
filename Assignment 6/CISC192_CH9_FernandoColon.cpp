@@ -27,14 +27,10 @@ int main()
 {
     double* ptrRain = new double[SIZE];
     string* ptrMonth = new string[SIZE];
-    //passing an entire array is automatically passed by reference, very handy 
     pointingThePointer(ptrMonth, ptrRain);
-    //since only 5 variables were allowed, inserted the function calls into the display call 
     display(ptrMonth, ptrRain);
-
     delete[] ptrMonth;
     delete[] ptrRain;
-
     return 0;
 }
 //variable names as to not be confused with main functions names
