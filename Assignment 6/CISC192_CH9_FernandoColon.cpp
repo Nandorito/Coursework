@@ -17,7 +17,7 @@ using namespace std;
 //never change, I indulged myself
 const int SIZE = 12;
 
-void pointPointer(string*, double*);
+void pointingThePointer(string*, double*);
 void display(string*, double*);
 double getMinRain(double* lRain);
 double getMaxRain(double* lRain);
@@ -28,7 +28,7 @@ int main()
     double* ptrRain = new double[SIZE];
     string* ptrMonth = new string[SIZE];
     //passing an entire array is automatically passed by reference, very handy 
-    pointPointer(ptrMonth, ptrRain);
+    pointingThePointer(ptrMonth, ptrRain);
     //since only 5 variables were allowed, inserted the function calls into the display call 
     display(ptrMonth, ptrRain);
 
@@ -38,7 +38,7 @@ int main()
     return 0;
 }
 //variable names as to not be confused with main functions names
-void pointPointer(string* pMonth, double* pRain)
+void pointingThePointer(string* pMonth, double* pRain)
 {
     //this does what Chapter 3-25 does in one line instead of 2
     srand(static_cast<double>(time(0)));
