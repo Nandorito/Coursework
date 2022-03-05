@@ -40,13 +40,16 @@ void pointingThePointer(string* pMonth, double* pRain)
     srand(static_cast<double>(time(0)));
 
     //only a months one since the rain can be done in the loop
-    vector<string> localMonths{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    vector<string> localMonths
+        {"January", "February", "March", "April", "May", "June", 
+        "July", "August", "September", "October", "November", "December"};
     vector<double> localRain;
     
     for(int i = 0; i < SIZE; i++)
     {
         pMonth[i] = localMonths[i];
-        //uses the mod operator to make sure the random number is within 401 (max value of 400). For loop adds 12 random doubles corresponding to each month
+        //uses the mod operator to make sure the random number is within 401 (max value of 400). 
+        //For loop adds 12 random doubles corresponding to each month
         //after dividing by 100, the value should be a number <= 4 inches. which was the maximum for last weeks assignment
         localRain.push_back((static_cast<double>(rand() % 401))/100);
         pRain[i] = localRain[i];
@@ -57,6 +60,8 @@ void pointingThePointer(string* pMonth, double* pRain)
 
 void display(string* pMonth, double* pRain)
 {
+    //string typeid does not display what you showed in the image (PSNt7...... vs PSs). however on cpp.sh instead of onlinegdb it does. 
+    //either way, I'm certain a string pointer is required for this assingment and I have reflected as such
     cout << "\nMonth has type: " << typeid(pMonth).name() << endl;
     cout << "Rain has type: " << typeid(pRain).name() << endl;
     cout << "\n\tMonthly Rainfall (inches)\n\n";
