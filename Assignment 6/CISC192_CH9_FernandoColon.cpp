@@ -36,7 +36,7 @@ int main()
 //variable names as to not be confused with main functions names
 void pointingThePointer(string* pMonth, double* pRain)
 {
-    //this does what Chapter 3-25 does in one line instead of 2
+    //made sure its of double type for some maths later
     srand(static_cast<double>(time(0)));
 
     //only a months one since the rain can be done in the loop
@@ -46,7 +46,7 @@ void pointingThePointer(string* pMonth, double* pRain)
     for(int i = 0; i < SIZE; i++)
     {
         pMonth[i] = localMonths[i];
-        //uses the mod operator to make sure the random number is within 401. For loop adds 12 random doubles corresponding to each month
+        //uses the mod operator to make sure the random number is within 401 (max value of 400). For loop adds 12 random doubles corresponding to each month
         //after dividing by 100, the value should be a number <= 4 inches. which was the maximum for last weeks assignment
         localRain.push_back((static_cast<double>(rand() % 401))/100);
         pRain[i] = localRain[i];
@@ -57,7 +57,6 @@ void pointingThePointer(string* pMonth, double* pRain)
 
 void display(string* pMonth, double* pRain)
 {
-    string* a;
     cout << "\nMonth has type: " << typeid(pMonth).name() << endl;
     cout << "Rain has type: " << typeid(pRain).name() << endl;
     cout << "\n\tMonthly Rainfall (inches)\n\n";
