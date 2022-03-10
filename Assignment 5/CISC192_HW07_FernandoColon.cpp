@@ -127,7 +127,7 @@ string maxMonths(string m[NUM_MONTHS], int r[NUM_MONTHS], int maxActual)
             }
         }
     }
-    return finalMax;//returns string of all months separated by a common
+    return finalMax;//returns string of all months separated by a comma
 }
 
 void display(string minMon, string maxMon, string mon[NUM_MONTHS], int rain[NUM_MONTHS], int total)
