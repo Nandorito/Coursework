@@ -41,8 +41,10 @@ void pointingThePointer(string* pMonth, double* pRain)
 
     //only a months one since the rain can be done in the loop
     vector<string> localMonths
-        {"January", "February", "March", "April", "May", "June", 
-        "July", "August", "September", "October", "November", "December"};
+        {
+            "January", "February", "March", "April", "May", "June", 
+            "July", "August", "September", "October", "November", "December"
+        };
     vector<double> localRain;
     
     for(int i = 0; i < SIZE; i++)
@@ -51,10 +53,10 @@ void pointingThePointer(string* pMonth, double* pRain)
         //uses the mod operator to make sure the random number is within 401 (max value of 400). 
         //For loop adds 12 random doubles corresponding to each month
         //after dividing by 100, the value should be a number <= 4 inches. which was the maximum for last weeks assignment
+
         localRain.push_back((static_cast<double>(rand() % 401))/100);
         pRain[i] = localRain[i];
     }
-
     //this method from the vector example seems to have a pointer to each individual vector node. I wouldve just populated a vector by reference, but I understand its for the assignment
 }
 

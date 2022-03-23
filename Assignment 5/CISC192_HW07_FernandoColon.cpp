@@ -11,6 +11,7 @@ Random Rainfall Generator
 #include <cstdlib>
 #include <iomanip>
 
+
 using namespace std;
 //global variables are usually looked down upon, but since the number on months will literally
 //never change, I indulged myself
